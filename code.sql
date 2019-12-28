@@ -30,7 +30,7 @@ CREATE TABLE `Titles` (
   PRIMARY KEY (`title_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---==============================================================================
+
 
 CREATE TABLE `Teachers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ CREATE TABLE `Teachers` (
   CONSTRAINT `Teachers_ibfk_5` FOREIGN KEY (`status`) REFERENCES `Statuses` (`status_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---==============================================================================
+
 
 CREATE TABLE `Auth` (
   `teacher_id` int(11) NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `Auth` (
   CONSTRAINT `Auth_ibfk_1` FOREIGN KEY (`teacher_id`) REFERENCES `Teachers` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---==============================================================================
+
 
 CREATE TABLE `ND_table` (
   `teacher_id` int(11) NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE `R_table` (
   CONSTRAINT `R_table_ibfk_1` FOREIGN KEY (`teacher_id`) REFERENCES `Teachers` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---==============================================================================
+
 
 INSERT INTO `Degrees` VALUES
 (1,'младший научный сотрудник'),
